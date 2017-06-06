@@ -1,0 +1,14 @@
+{
+  "name":"Trailer Backup",
+  "id":"90459125",
+  "template": "Blank",
+  "version": "0.0.0",
+  "src": "src",
+  "dist": "dist",
+  "main": "index.html",
+  "icon": "Icon.png",
+  "developer": "metalbabble",
+  "category": "Monitoring",
+  "type": "Local",
+  "description": "Generated on 6/5/2017, 8:54:53 PM by ngi-sdk version "
+}
