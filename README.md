@@ -8,3 +8,5 @@ To start, install GM NGI from: https://developer.gm.com/ngi and execute:
 
 ngi serve
 
+#Testing
+To test, adjust the wheel_angle value from the "signal panel" toolbar.
