@@ -8,6 +8,7 @@ Nice to have
   jquery
   when switch out of reverse, go where you were last - nick
   look into warnings
+  small gradient on the top or trail dash logo - brian
 
 Must have
   detect towing capability - nick
