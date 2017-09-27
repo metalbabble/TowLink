@@ -1,44 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trailer Backup Direction</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <!-- Base css, but you'll likely want to keep them -->
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
+<head>
+  <title>Trailer Backup Direction</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <!-- Your custom files -->
-    <link rel="stylesheet" href="css/app.css" type="text/css">
+  <!-- Base css, but you'll likely want to keep them -->
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
 
-    <script src="GMLIB/system.js"></script>
-    <script src="GMLIB/info.js"></script>
-    <!-- Uncomment libraries as you need them: -->
-    <!-- <script src="GMLIB/comm.js"></script> -->
-    <!-- <script src="GMLIB/io.js"></script> -->
-    <!-- <script src="GMLIB/media.js"></script> -->
-    <!-- <script src="GMLIB/monitor.js"></script> -->
-    <!-- <script src="GMLIB/nav.js"></script> -->
-    <!-- <script src="GMLIB/phone.js"></script> -->
-    <!-- <script src="GMLIB/ui.js"></script> -->
-    <!-- <script src="GMLIB/util.js"></script> -->
-    <!-- <script src="GMLIB/voice.js"></script> -->
+  <!-- Your custom files -->
+  <link rel="stylesheet" href="css/app.css" type="text/css">
 
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="close"><img src="images/close.png" onclick="gm.system.closeApp()" alt="close"></div>
-      <div id="main">
+  <script src="GMLIB/system.js"></script>
+  <script src="GMLIB/info.js"></script>
+  <script src="js/justgage.js"></script>
+  <script src="js/raphael-2.1.4.min.js"></script>
+  <!-- Uncomment libraries as you need them: -->
+  <!-- <script src="GMLIB/comm.js"></script> -->
+  <!-- <script src="GMLIB/io.js"></script> -->
+  <!-- <script src="GMLIB/media.js"></script> -->
+  <!-- <script src="GMLIB/monitor.js"></script> -->
+  <!-- <script src="GMLIB/nav.js"></script> -->
+  <!-- <script src="GMLIB/phone.js"></script> -->
+  <!-- <script src="GMLIB/ui.js"></script> -->
+  <!-- <script src="GMLIB/util.js"></script> -->
+  <!-- <script src="GMLIB/voice.js"></script> -->
 
-        <!-- Remove all code inside #main and add your own! -->
-        <h1>Trailer Backup Direction</h1>
-        <p>
-        <span id="steer"></span>
-        </p>
+</head>
 
+<body>
+  <div id="wrapper">
+    <div id="close"><img src="images/close.png" onclick="gm.system.closeApp()" alt="close"></div>
+    <div id="main">
+
+      <!-- Remove all code inside #main and add your own! -->
+      <h1>Home - Gauges</h1>
+      <!--Gauges-->
+    <h2>Important Gauges</h2>
+     <div >
+      <div class="box">
+        <!--Temperature Gauges-->
+        <div id="transOilTemp" class="gauge"></div> 
+        <div id="engineOilTemp" class="gauge"></div>
+        <div id="engineCoolantTemp" class="gauge"></div>
+
+        <!--Brakes is a bool-->
+        <div id="brakesOverheated" class="gauge"></div> 
+        <!--Bool-->
+        <div id="trailerBrakeLightFail" class="gauge"></div>
+        <!--Bool-->
+        <div id="trailerHitch" class="gauge"></div>
+        
+        <!--Text - What gear are ou in?-->
+        <div id="gearAutomatic" class="gauge"></div>
+  
+      </div>
+      <div class="box">
+       
+      </div>
+      <div class="box">
+        <div id="g3" class="gauge"></div>
+      </div>
+      <div class="box">
+        <div id="g4" class="gauge"></div>
       </div>
     </div>
+    <div id="backup">
 
-    <!-- Your app code: -->
-    <script src="js/app.js"></script>
-  </body>
+      <!-- Remove all code inside #main and add your own! -->
+      <h1>Trailer Backup Direction</h1>
+      <p>
+        <span id="steer"></span>
+      </p>
+
+    </div>
+    <div id="checklist">
+
+      <!-- Remove all code inside #main and add your own! -->
+      <h1>Trailering Checklist</h1>
+      <p>
+        <span id=""></span>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+  <script src="js/gauge.js"></script>
+  <script src="js/checklist.js"></script>
+  <script src="js/backup.js"></script>
+</body>
+
 </html>
