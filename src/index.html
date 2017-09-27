@@ -32,37 +32,25 @@
 <body>
   <div id="wrapper">
     <div id="close"><img src="images/close.png" onclick="gm.system.closeApp()" alt="close"></div>
-    <div id="main">
 
-      <!-- Remove all code inside #main and add your own! -->
+    <div id="main">
      <div >
-      <div class="box" id="tabHome" style="display:block">
+          <!-- tabHome -->
+      <div class="gaugeBox" id="tabHome" style="display:block">
         <!--Temperature Gauges-->
         <div id="transOilTemp" class="gauge"></div> 
         <div id="engineOilTemp" class="gauge"></div>
-        <div id="engineCoolantTemp" class="gauge"></div>
 
         <!--Brakes is a bool-->
-        <div id="brakesOverheated" class="gauge"></div> 
+        <div id="brakesOverheated" class="indicatorLight"></div> 
         <!--Bool-->
-        <div id="trailerBrakeLightFail" class="gauge"></div>
+        <div id="trailerBrakeLightFail" class="indicatorLight"></div>
         <!--Bool-->
-        <div id="trailerHitch" class="gauge"></div>
-        
-        <!--Text - What gear are ou in?-->
-        <div id="gearAutomatic" class="gauge"></div>
+        <div id="trailerHitch" class="indicatorLight"></div>
   
       </div>
-      <div class="box">
-       
-      </div>
-      <div class="box">
-        <div id="g3" class="gauge"></div>
-      </div>
-      <div class="box">
-        <div id="g4" class="gauge"></div>
-      </div>
     </div>
+   <!-- tabBackup -->
     <div id="tabBackup" style="display:none">
 
       <!-- Remove all code inside #main and add your own! -->
@@ -72,6 +60,7 @@
       </p>
 
     </div>
+       <!-- tabChecklist -->
     <div id="tabChecklist" style="display:none">
 
       <!-- Remove all code inside #main and add your own! -->
