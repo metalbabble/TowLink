@@ -6,6 +6,8 @@ Questions for GM
 
 Nice to have
   jquery
+  when switch out of reverse, go where you were last - nick
+  look into warnings
 
 Must have
   detect towing capability - nick
