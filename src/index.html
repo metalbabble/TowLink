@@ -35,19 +35,36 @@
 
     <div id="main">
      <div >
+
           <!-- tabHome -->
       <div class="gaugeBox" id="tabHome" style="display:block">
+          <h1>TowLink Home</h1>
+        <table><tr><td>
         <!--Temperature Gauges-->
-        <div id="transOilTemp" class="gauge"></div> 
-        <div id="engineOilTemp" class="gauge"></div>
 
+          <div id="transOilTemp" class="gauge"></div> 
+          </td><td>
+          <div id="engineOilTemp" class="gauge"></div>
+
+
+        </td><td style="text-align:left">
         <!--Brakes is a bool-->
-        <div style="display:none" id="brakesOverheated" class="indicatorLight"></div> 
+        <div id="brakesOverheated" class="indicatorLight">
+            <img src="images/ok.png" align="absmiddle"/>
+            <b>Brakes Temperature</b>
+        </div> 
         <!--Bool-->
-        <div id="trailerBrakeLightFail" class="indicatorLight"></div>
+        <div id="trailerBrakeLightFail" class="indicatorLight">
+            <img src="images/ok.png" align="absmiddle"/>
+            <b>Trailer Brakelight</b>
+        </div>
         <!--Bool-->
-        <div id="trailerHitchConnected" class="indicatorLight"></div>
-  
+        <div id="trailerHitchConnected" class="indicatorLight">
+            <img src="images/ok.png" align="absmiddle"/>
+            <b>Hitch Connected</b>
+        </div>
+      </td></tr></table>
+
       </div>
     </div>
    <!-- tabBackup -->

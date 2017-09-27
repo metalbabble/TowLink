@@ -1,5 +1,5 @@
 {
-  "name":"Trailer Backup",
+  "name":"TowLink",
   "id":"90459125",
   "template": "Blank",
   "version": "0.0.0",
@@ -7,8 +7,8 @@
   "dist": "dist",
   "main": "index.html",
   "icon": "Icon.png",
-  "developer": "metalbabble",
+  "developer": "Team High Country",
   "category": "Monitoring",
   "type": "Local",
-  "description": "Generated on 6/5/2017, 8:54:53 PM by ngi-sdk version "
+  "description": "Developed by Nick Perno and Brian Shea "
 }
