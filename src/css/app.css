@@ -16,6 +16,13 @@
   width: 100%;
 }
 
+#footer {
+  position : absolute;
+  bottom : 0;
+  width:100%;
+  background-color:black;
+}
+
 @media (min-width: 801px) {
   #close {
     top: 104px;
