@@ -1,5 +1,6 @@
 // app.js
 
+<<<<<<< HEAD
 // Watch Signals
 var signals = ['gear_state']
 
@@ -18,3 +19,5 @@ gm.info.watchVehicleData(function (data) {
     }
   }
 }, signals)
+=======
+>>>>>>> 1a1b6980f079e09d4724befe1c28fd67a7e76a3d

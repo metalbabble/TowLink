@@ -48,18 +48,27 @@ if (data.trailer_brakelght_fail) { trailerBrakeLightFail.refresh(data.trailer_br
 if (data.trailer_hitch) { trailerHitchConnected.refresh(data.trailer_hitch) }
 
 
+  
+  brakesOverheated(data.brakes_overheated); 
+  trailerBrakeLightFail(data.trailer_brakelght_fail); 
+  trailerHitchConnected(data.trailer_hitch); 
 // question: is there a tow haul mode?
 }, signals)
 
 // stoplite gagues
 
-function brakesOverheated() {
-  if (brakesOverheated == true) {
-    document.getElementById('').style.display = 'blocks'
-  }
+function brakesOverheated (val) {
+  console.log(val);
+  toggleAlertLight(val,"overheat");
 }
-function trailerBrakeLightFail() { }
-function trailerHitchConnected() { }
+function trailerBrakeLightFail (val) {
+  console.log(val);
+  toggleAlertLight(val,"trailerlight");
+}
+function trailerHitchConnected (val) {
+  console.log(val);
+  toggleAlertLight(!val,"hitch");
+}
 
 // Arrow Gauges
 var transOilTemp = new JustGage({
