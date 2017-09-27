@@ -14,3 +14,47 @@ gm.info.watchVehicleData(function(data){
     if (data.trailer_brakelght_fail) {trailerBrakeLightFail.refresh(data.trailer_brakelght_fail)}
     if (data.trailer_hitch) {trailerHitch.refresh(data.trailer_hitch)}
 }, signals);
+
+//Gauges
+      var transOilTemp = new JustGage({
+        id: 'transOilTemp',
+        value: 0,
+        min: 0,
+        max: 215,
+        pointer: true,
+        title: "Transmission Oil Temperature",
+        label: "degrees",
+        
+        customSectors: [{
+          color: '#ff0000',
+          lo: 160,
+          hi: 175
+        }, {
+          color: '#00ff00',
+          lo: 0,
+          hi: 160
+        }],
+        counter: true});
+
+      var engineOilTemp = new JustGage({
+        id: 'engineOilTemp',
+        value: 0,
+        min: 0,
+        max: 215,
+        pointer: true,
+        title: "Engine Oil Temperature",
+        label: "degrees",
+   
+        customSectors: [{
+          color: '#ff0000',
+          lo: 160,
+          hi: 175
+        }, {
+          color: '#00ff00',
+          lo: 0,
+          hi: 160
+        }],
+        counter: true
+});
+
+    
