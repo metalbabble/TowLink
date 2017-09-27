@@ -3,6 +3,7 @@
 // Watch Signals
 var signals = ['engine_oil_temp', 'brakes_overheated', 'trailer_brakelght_fail', 'transmission_oil_temp',
   'trailer_hitch', 'engine_coolant_temp', 'gear_automatic', 'Display_units']
+
 // Watch
 gm.info.watchVehicleData(function (data) {
   console.log(data)
@@ -11,6 +12,7 @@ gm.info.watchVehicleData(function (data) {
   // get display units
   if (data.Display_units) { document.getElementById("units").value = data.Display_units; }
   displayUnit = document.getElementById("units").value;
+
   // oil temp
   if (data.engine_oil_temp) {
     console.log('displayunis ' + displayUnit);
@@ -46,6 +48,7 @@ gm.info.watchVehicleData(function (data) {
   brakesOverheated(data.brakes_overheated); 
   trailerBrakeLightFail(data.trailer_brakelght_fail); 
   trailerHitchConnected(data.trailer_hitch); 
+
 // question: is there a tow haul mode?
 }, signals)
 
@@ -53,15 +56,15 @@ gm.info.watchVehicleData(function (data) {
 
 function brakesOverheated (val) {
   console.log(val);
-  toggleAlertLight(val,"overheat");
+  toggleAlertLight(val, "overheat");
 }
 function trailerBrakeLightFail (val) {
   console.log(val);
-  toggleAlertLight(val,"trailerlight");
+  toggleAlertLight(val, "trailerlight");
 }
 function trailerHitchConnected (val) {
   console.log(val);
-  toggleAlertLight(!val,"hitch");
+  toggleAlertLight(!val, "hitch");
 }
 
 // Arrow Gauges
