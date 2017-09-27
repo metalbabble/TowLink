@@ -43,6 +43,6 @@
       box-sizing: border-box;
     }
     .indicatorLight {
-        
+        background-color: red;
     }
 }

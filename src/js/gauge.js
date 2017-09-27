@@ -12,11 +12,23 @@ gm.info.watchVehicleData(function(data){
     if (data.transmission_oil_temp) {transOilTemp.refresh(data.transmission_oil_temp)}
     if (data.brakes_overheated) {brakesOverheated.refresh(data.brakes_overheated)}
     if (data.trailer_brakelght_fail) {trailerBrakeLightFail.refresh(data.trailer_brakelght_fail)}
-    if (data.trailer_hitch) {trailerHitch.refresh(data.trailer_hitch)}
+    if (data.trailer_hitch) {trailerHitchConnected.refresh(data.trailer_hitch)}
     //question: is there a tow haul mode?
 }, signals);
 
 // todo: stoplite gagues
+
+
+function brakesOverheated (){
+
+  if(brakesOverheated == true){
+    document.getElementById('').style.display="blocks"
+  }
+
+}
+var trailerBrakeLightFail
+var trailerHitchConnected
+
 
 
 //Arrow Gauges
