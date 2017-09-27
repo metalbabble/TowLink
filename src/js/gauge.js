@@ -42,12 +42,6 @@ gm.info.watchVehicleData(function (data) {
       console.log('f')
     }
   }
-
-if (data.brakes_overheated) { brakesOverheated.refresh(data.brakes_overheated) }
-if (data.trailer_brakelght_fail) { trailerBrakeLightFail.refresh(data.trailer_brakelght_fail) }
-if (data.trailer_hitch) { trailerHitchConnected.refresh(data.trailer_hitch) }
-
-
   
   brakesOverheated(data.brakes_overheated); 
   trailerBrakeLightFail(data.trailer_brakelght_fail); 
