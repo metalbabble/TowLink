@@ -26,8 +26,8 @@ function brakesOverheated (){
   }
 
 }
-var trailerBrakeLightFail
-var trailerHitchConnected
+function trailerBrakeLightFail () {}
+function trailerHitchConnected () {}
 
 
 
