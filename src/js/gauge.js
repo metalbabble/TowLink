@@ -13,9 +13,13 @@ gm.info.watchVehicleData(function(data){
     if (data.brakes_overheated) {brakesOverheated.refresh(data.brakes_overheated)}
     if (data.trailer_brakelght_fail) {trailerBrakeLightFail.refresh(data.trailer_brakelght_fail)}
     if (data.trailer_hitch) {trailerHitch.refresh(data.trailer_hitch)}
+    //question: is there a tow haul mode?
 }, signals);
 
-//Gauges
+// todo: stoplite gagues
+
+
+//Arrow Gauges
       var transOilTemp = new JustGage({
         id: 'transOilTemp',
         value: 0,
