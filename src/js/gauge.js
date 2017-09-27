@@ -10,22 +10,26 @@ gm.info.watchVehicleData(function (data) {
   // signals
   if (data.engine_oil_temp) { engineOilTemp.refresh(data.engine_oil_temp);}
   if (data.transmission_oil_temp) {transOilTemp.refresh(data.transmission_oil_temp)}
-  if (data.brakes_overheated) {brakesOverheated(data.brakes_overheated); }
-  if (data.trailer_brakelght_fail) {trailerBrakeLightFail(data.trailer_brakelght_fail); }
-  if (data.trailer_hitch) {trailerHitchConnected(data.trailer_hitch); }
+
+  brakesOverheated(data.brakes_overheated); 
+  trailerBrakeLightFail(data.trailer_brakelght_fail); 
+  trailerHitchConnected(data.trailer_hitch); 
 // question: is there a tow haul mode?
 }, signals)
 
 // todo: stoplite gagues
 
-function brakesOverheated () {
-  toggleAlertLight(1,"overheat");
+function brakesOverheated (val) {
+  console.log(val);
+  toggleAlertLight(val,"overheat");
 }
-function trailerBrakeLightFail () {
-  toggleAlertLight(1,"trailerlight");
+function trailerBrakeLightFail (val) {
+  console.log(val);
+  toggleAlertLight(val,"trailerlight");
 }
-function trailerHitchConnected () {
-  toggleAlertLight(1,"hitch");
+function trailerHitchConnected (val) {
+  console.log(val);
+  toggleAlertLight(!val,"hitch");
 }
 
 // Arrow Gauges

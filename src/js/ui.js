@@ -25,13 +25,15 @@ function showChecklist()
 
 function toggleAlertLight(isError, alertName)
 {
+    console.log("-alert light update-");
     if(Boolean(isError))
     {
+        console.log("Setting error");
         document.getElementById("alert-" + alertName).src = "images/x-" + alertName + ".png";
     }
     else
     {
+        console.log("Setting OK");
         document.getElementById("alert-" + alertName).src = "images/ok-" + alertName + ".png";
     }
-
 }
