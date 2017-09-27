@@ -2,29 +2,64 @@
 
 // Watch Signals
 var signals = ['engine_oil_temp', 'brakes_overheated', 'trailer_brakelght_fail', 'transmission_oil_temp',
-  'trailer_hitch', 'engine_coolant_temp', 'gear_automatic']
-
+  'trailer_hitch', 'engine_coolant_temp', 'gear_automatic', 'Display_units']
 // Watch
 gm.info.watchVehicleData(function (data) {
   console.log(data)
   // signals
-  if (data.engine_oil_temp) { engineOilTemp.refresh(data.engine_oil_temp);}
-  if (data.transmission_oil_temp) {transOilTemp.refresh(data.transmission_oil_temp)}
-  if (data.brakes_overheated) {brakesOverheated.refresh(data.brakes_overheated)}
-  if (data.trailer_brakelght_fail) {trailerBrakeLightFail.refresh(data.trailer_brakelght_fail)}
-  if (data.trailer_hitch) {trailerHitchConnected.refresh(data.trailer_hitch)}
+
+  // get display units
+  if (data.Display_units) { document.getElementById("units").value = data.Display_units; }
+  displayUnit = document.getElementById("units").value;
+  // oil temp
+  if (data.engine_oil_temp) {
+    console.log('displayunis ' + displayUnit);
+    if (document.getElementById('units').value == '$0')
+    // do not convert
+    {
+      engineOilTemp.refresh(data.engine_oil_temp)
+      console.log('c')
+    }
+    // convert
+    else {
+      engineOilTemp.refresh(cToF(data.engine_oil_temp))
+      console.log('f')
+    }
+  }
+  // trans temp
+  if (data.transmission_oil_temp) {
+
+    console.log('displayunis ' + displayUnit);
+    if (document.getElementById('units').value == '$0')
+    // do not convert
+    {
+      transOilTemp.refresh(data.transmission_oil_temp)
+      console.log('c')
+    }
+    // convert
+    else {
+      transOilTemp.refresh(cToF(data.transmission_oil_temp))
+      console.log('f')
+    }
+  }
+
+if (data.brakes_overheated) { brakesOverheated.refresh(data.brakes_overheated) }
+if (data.trailer_brakelght_fail) { trailerBrakeLightFail.refresh(data.trailer_brakelght_fail) }
+if (data.trailer_hitch) { trailerHitchConnected.refresh(data.trailer_hitch) }
+
+
 // question: is there a tow haul mode?
 }, signals)
 
-// todo: stoplite gagues
+// stoplite gagues
 
-function brakesOverheated () {
+function brakesOverheated() {
   if (brakesOverheated == true) {
     document.getElementById('').style.display = 'blocks'
   }
 }
-function trailerBrakeLightFail () {}
-function trailerHitchConnected () {}
+function trailerBrakeLightFail() { }
+function trailerHitchConnected() { }
 
 // Arrow Gauges
 var transOilTemp = new JustGage({
@@ -45,7 +80,8 @@ var transOilTemp = new JustGage({
     lo: 0,
     hi: 160
   }],
-counter: true})
+  counter: true
+})
 
 var engineOilTemp = new JustGage({
   id: 'engineOilTemp',
@@ -69,8 +105,7 @@ var engineOilTemp = new JustGage({
 })
 
 // helper funcitons
-function cToF (celsius) {
-  var cTemp = celsius
-  var cToFahr = cTemp * 9 / 5 + 32
-  console.log(cToFahr)
+function cToF(celsius) {
+  return (celsius * 9 / 5 + 32)
+  // console.log(celsius * 9 / 5 + 32)
 }

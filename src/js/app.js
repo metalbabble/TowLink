@@ -11,6 +11,7 @@ gm.info.watchVehicleData(function (data) {
   gearState.refresh(data.gear_state)
 
   function gearState () {
+    console.log(gearState);
     // TRANSMISSION_ENGAGED_IN_REVERSE = 0x02
     if (gearState == '0x02') {
         showBackup();

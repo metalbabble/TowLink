@@ -1,17 +1,12 @@
 TODO
 
-1. Conver c to f (maybe get from car) 
+Questions for GM
+  tow haul mode
+  is there a way to bypass backup camera?
 
-function cToF(celsius) 
-{
-  var cTemp = celsius;
-  var cToFahr = cTemp * 9 / 5 + 32;
-  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
-    console.log(message);
-}
+Nice to have
+  jquery
 
-wrap an if around dispaly units
-
-2. auto siwthc to backup and backup
-3. tow haul mode
-4. should we detect if the vehicle has towing in general?
+Must have
+  detect towing capability - nick
+  screen size - brian 
