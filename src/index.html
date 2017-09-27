@@ -11,6 +11,7 @@
   <!-- Your custom files -->
   <link rel="stylesheet" href="css/app.css" type="text/css">
 
+  <script src="js/ui.js"></script>
   <script src="GMLIB/system.js"></script>
   <script src="GMLIB/info.js"></script>
   <script src="js/justgage.js"></script>
@@ -38,7 +39,7 @@
       <!--Gauges-->
     <h2>Important Gauges</h2>
      <div >
-      <div class="box">
+      <div class="box" id="tabHome" style="display:block">
         <!--Temperature Gauges-->
         <div id="transOilTemp" class="gauge"></div> 
         <div id="engineOilTemp" class="gauge"></div>
@@ -65,7 +66,7 @@
         <div id="g4" class="gauge"></div>
       </div>
     </div>
-    <div id="backup">
+    <div id="tabBackup" style="display:none">
 
       <!-- Remove all code inside #main and add your own! -->
       <h1>Trailer Backup Direction</h1>
@@ -74,7 +75,7 @@
       </p>
 
     </div>
-    <div id="checklist">
+    <div id="tabChecklist" style="display:none">
 
       <!-- Remove all code inside #main and add your own! -->
       <h1>Trailering Checklist</h1>
@@ -82,6 +83,13 @@
         <span id=""></span>
       </p>
 
+    </div>
+
+    <!-- ribbon icons -->
+    <div style="background-color:black">
+      <img src="images/icon_home.png" onclick="showHome();"/>
+      <img src="images/icon_reverse.png" onclick="showBackup();"/>
+      <img src="images/icon_checklist.png" onclick="showChecklist();"/>
     </div>
   </div>
 
