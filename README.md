@@ -21,4 +21,4 @@ ngi serve
 To test, use the signal panel toolbar and adjust things like: wheel_angle, brakes_overheated, trailer_hitch, trailer_breaklight_fail, gear_state, wheel_angle
 
 #TODO
-see todo.txt
+see todo.txt for more info
