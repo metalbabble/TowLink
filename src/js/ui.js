@@ -27,13 +27,11 @@ function toggleAlertLight(isError, alertName)
 {
     if(Boolean(isError))
     {
-        document.getElementById("ok-" + alertName).style.display = "none";
-        document.getElementById("x-" + alertName).style.display = "block";
+        document.getElementById("alert-" + alertName).src = "images/x-" + alertName + ".png";
     }
     else
     {
-        document.getElementById("ok-" + alertName).style.display = "block";
-        document.getElementById("x-" + alertName).style.display = "none";
+        document.getElementById("alert-" + alertName).src = "images/ok-" + alertName + ".png";
     }
 
 }
