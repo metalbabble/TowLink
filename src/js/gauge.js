@@ -1,3 +1,5 @@
+// gauge.js
+
 //Watch Signals
 var signals = ['engine_oil_temp', 'brakes_overheated','trailer_brakelght_fail','transmission_oil_temp',
 'trailer_hitch', 'engine_coolant_temp', 'gear_automatic'];
