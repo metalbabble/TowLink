@@ -1,3 +1,5 @@
+//--------SWITCH BETWEEN TABS-----------------
+
 function showHome()
 {
     document.getElementById("tabHome").style.display = "block";
@@ -19,3 +21,19 @@ function showChecklist()
     document.getElementById("tabChecklist").style.display = "block";
 }
 
+//-----------ERROR LIGHTS--------------
+
+function toggleAlertLight(isError, alertName)
+{
+    if(Boolean(isError))
+    {
+        document.getElementById("ok-" + alertName).style.display = "none";
+        document.getElementById("x-" + alertName).style.display = "block";
+    }
+    else
+    {
+        document.getElementById("ok-" + alertName).style.display = "block";
+        document.getElementById("x-" + alertName).style.display = "none";
+    }
+
+}
