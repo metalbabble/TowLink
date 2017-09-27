@@ -31,15 +31,18 @@
   /*CUSTOM*/
 
     .gauge {
-      width: 240px;
-      height: 120px;
+      width: 140px;
+      height: 60px;
     }
 
-    .box {
+    .gaugeBox {
       float: left;
-      width: 100%;
+      text-align: left;
+      width: 50%;
       height: 100%;
       box-sizing: border-box;
     }
-
+    .indicatorLight {
+        
+    }
 }

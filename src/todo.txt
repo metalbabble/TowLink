@@ -1,0 +1,6 @@
+TODO
+
+1. Conver c to f (maybe get from car)
+2. auto siwthc to backup and backup
+3. tow haul mode
+4. should we detect if the vehicle has towing in general?
