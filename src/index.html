@@ -68,12 +68,16 @@
       <div style="max-width:400px">
       <p style="text-align:left; padding-left:100px;">
         <span id="">
-          <label><input type="checkbox" id="chkCoupler"> Trailer coupler closed and locked</label><br/>
-          <label><input type="checkbox" id="chkTirePressure"> Trailer tire pressure checked</label><br/>
-          <label><input type="checkbox" id="chkElectrical"> Electrical harness connected</label><br/>
-          <label><input type="checkbox" id="chkChains"> Tow chains connected</label><br/>
-          <label><input type="checkbox" id="chkJacks"> Trailer free of leveling jacks and chucks</label><br/>
+          <label onclick="chkCheck();"><input type="checkbox" id="chkCoupler"> Trailer coupler closed and locked</label><br/>
+          <label onclick="chkCheck();"><input type="checkbox" id="chkTirePressure"> Trailer tire pressure checked</label><br/>
+          <label onclick="chkCheck();"><input type="checkbox" id="chkElectrical"> Electrical harness connected</label><br/>
+          <label onclick="chkCheck();"><input type="checkbox" id="chkChains"> Tow chains connected</label><br/>
+          <label onclick="chkCheck();"><input type="checkbox" id="chkJacks"> Trailer free of leveling jacks and chucks</label><br/>
         </span>
+      </p>
+      <p id="lblReadyToGo" style="display:none">
+        <img src="images/ok.png" align="absmiddle"/>
+        <b>Ready to go!</b>
       </p>
     </div>
 

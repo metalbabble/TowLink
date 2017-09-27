@@ -18,3 +18,4 @@ function showChecklist()
     document.getElementById("tabBackup").style.display = "none";
     document.getElementById("tabChecklist").style.display = "block";
 }
+
