@@ -11,7 +11,6 @@
   <!-- Your custom files -->
   <link rel="stylesheet" href="css/app.css" type="text/css">
 
-  <script src="js/ui.js"></script>
   <script src="GMLIB/system.js"></script>
   <script src="GMLIB/info.js"></script>
   <script src="GMLIB/voice.js"></script> 
@@ -36,30 +35,43 @@
     <div id="close"><img src="images/close.png" onclick="gm.system.closeApp()" alt="close"></div>
 
     <div id="main">
-     <div >
+      <div>
 
-          <!-- tabHome -->
-      <div class="gaugeBox" id="tabHome" style="display:block">
+        <!-- tabHome -->
+        <div class="gaugeBox" id="tabHome" style="display:block">
           <h1>TowLink Home</h1>
-        <table style="margin:auto"><tr><td>
-        <!--Temperature Gauges-->
+          <table style="margin:auto">
+            <tr>
+              <td>
+                <!--Temperature Gauges-->
+                <div id="transOilTemp" class="gauge"></div>
+              </td>
+              <td>
+                <div id="engineOilTemp" class="gauge"></div>
 
-          <div id="transOilTemp" class="gauge"></div> 
-          </td><td>
-          <div id="engineOilTemp" class="gauge"></div>
 
-
-        </td><td style="text-align:left;">
-        <!--Brakes is a bool-->
-        <div id="brakesOverheated" class="indicatorLight">
-            <img id="alert-overheat" src="images/ok-overheat.png" align="absmiddle"/>
-            <b>Brakes Temperature</b>
-        </div> 
-        <!--Bool-->
-        <div id="trailerBrakeLightFail" class="indicatorLight">
-            <img id="alert-trailerlight" src="images/ok-trailerlight.png" align="absmiddle"/>
-            <b>Trailer Brakelight</b>
+              </td>
+              <td style="text-align:left;">
+                <!--Brakes is a bool-->
+                <div id="brakesOverheated" class="indicatorLight">
+                  <img id="alert-overheat" src="images/ok-overheat.png" align="absmiddle" />
+                  <b>Brakes Temperature</b>
+                </div>
+                <!--Bool-->
+                <div id="trailerBrakeLightFail" class="indicatorLight">
+                  <img id="alert-trailerlight" src="images/ok-trailerlight.png" align="absmiddle" />
+                  <b>Trailer Brakelight</b>
+                </div>
+                <!--Bool-->
+                <div id="trailerHitchConnected" class="indicatorLight">
+                  <img id="alert-hitch" src="images/ok-hitch.png" align="absmiddle" />
+                  <b>Hitch Connected</b>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
+<<<<<<< HEAD
         <!--Bool-->
         <div id="trailerHitchConnected" class="indicatorLight">
             <img id="alert-hitch" src="images/ok-hitch.png" align="absmiddle"/>
@@ -73,55 +85,63 @@
           </div>  
     </td></tr></table>
 
+=======
+>>>>>>> master
       </div>
+
+      <!-- tabBackup -->
+      <div id="tabBackup" style="display:none">
+        <h1>Trailer Backup Direction</h1>
+        <p>
+          <span class="enbiggen" id="steer"></span>
+        </p>
+      </div>
+
+      <!-- tabChecklist -->
+      <div id="tabChecklist" style="display:none">
+        <h1>Trailering Checklist</h1>
+        <table style="margin:auto">
+          <tr>
+            <td>
+              <div>
+                <p style="text-align:left; padding-left:100px;">
+                  <span id="checkList" class="enbiggen">
+                  <label onclick="chkCheck();"><input type="checkbox" id="chkCoupler"> Trailer coupler closed and locked</label><br/>
+                  <label onclick="chkCheck();"><input type="checkbox" id="chkTirePressure"> Trailer tire pressure checked</label><br/>
+                  <label onclick="chkCheck();"><input type="checkbox" id="chkElectrical"> Electrical harness connected</label><br/>
+                  <label onclick="chkCheck();"><input type="checkbox" id="chkChains"> Tow chains connected</label><br/>
+                  <label onclick="chkCheck();"><input type="checkbox" id="chkJacks"> Trailer free of leveling jacks and chucks</label><br/>
+                </span>
+                </p>
+            </td>
+            <td width="100px">
+            </td>
+            <td>
+              <img id="trailerLightChecker" src="images/trailer.png" />
+            </td>
+          </tr>
+        </table>
+        <p id="lblReadyToGo" style="display:none">
+          <img src="images/ok.png" align="absmiddle" />
+          <b>Ready to go!</b>
+        </p>
+        </div>
+      </div>
+
+      <!-- ribbon icons -->
+      <footer id="footer">
+        <img src="images/icon_home.png" onclick="showHome();" />
+        <img src="images/icon_reverse.png" onclick="showBackup();" />
+        <img src="images/icon_checklist.png" onclick="showChecklist();" />
+      </footer>
     </div>
-   <!-- tabBackup -->
-    <div id="tabBackup" style="display:none">
 
-      <!-- Remove all code inside #main and add your own! -->
-      <h1>Trailer Backup Direction</h1>
-      <p>
-        <span class="enbiggen" id="steer"></span>
-      </p>
-
-    </div>
-       <!-- tabChecklist -->
-    <div id="tabChecklist" style="display:none">
-
-      <!-- Remove all code inside #main and add your own! -->
-      <h1>Trailering Checklist</h1>
-      <div>
-      <p style="text-align:left; padding-left:100px;">
-        <span id="checkList" class="enbiggen">
-          <label onclick="chkCheck();"><input type="checkbox" id="chkCoupler"> Trailer coupler closed and locked</label><br/>
-          <label onclick="chkCheck();"><input type="checkbox" id="chkTirePressure"> Trailer tire pressure checked</label><br/>
-          <label onclick="chkCheck();"><input type="checkbox" id="chkElectrical"> Electrical harness connected</label><br/>
-          <label onclick="chkCheck();"><input type="checkbox" id="chkChains"> Tow chains connected</label><br/>
-          <label onclick="chkCheck();"><input type="checkbox" id="chkJacks"> Trailer free of leveling jacks and chucks</label><br/>
-        </span>
-      </p>
-      <p id="lblReadyToGo" style="display:none">
-        <img src="images/ok.png" align="absmiddle"/>
-        <b>Ready to go!</b>
-      </p>
-    </div>
-
-    </div>
-
-    <!-- ribbon icons -->
-    <footer id="footer">
-      <img src="images/icon_home.png" onclick="showHome();"/>
-      <img src="images/icon_reverse.png" onclick="showBackup();"/>
-      <img src="images/icon_checklist.png" onclick="showChecklist();"/>
-    </footer>
-  </div>
-
-  <!-- JS -->
-  <script src="js/app.js"></script>
-  <script src="js/gauge.js"></script>
-  <script src="js/checklist.js"></script>
-  <script src="js/backup.js"></script>
-  <input type="hidden" id="units" value="$1"/>
+    <!-- JS -->
+    <script src="js/app.js"></script>
+    <script src="js/gauge.js"></script>
+    <script src="js/checklist.js"></script>
+    <script src="js/backup.js"></script>
+    <input type="hidden" id="units" value="$1" />
 </body>
 
 </html>

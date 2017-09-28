@@ -25,6 +25,7 @@ body {
   bottom : 0;
   width:100%;
   background-color:black;
+  text-align:center;
 }
 
 
@@ -68,7 +69,18 @@ body {
     transform: scale(2);
     margin-top:50px;
   }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> master
+}
+
+/* Only for smaller 8in screen */
+@media  (max-width: 800px) {
+#trailerLightChecker{
+  height:50%;
+  width:50%;
+  }
 }
