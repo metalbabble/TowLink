@@ -2,7 +2,7 @@
   "name":"TowLink",
   "id":"90459125",
   "template": "Blank",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "src": "src",
   "dist": "dist",
   "main": "index.html",
