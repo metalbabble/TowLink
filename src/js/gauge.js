@@ -116,6 +116,7 @@ function cToF (celsius) {
   return (celsius * 9 / 5 + 32)
 // console.log(celsius * 9 / 5 + 32)
 }
+
 var tssHandle
 
 function oilTempWarning (temp) {
