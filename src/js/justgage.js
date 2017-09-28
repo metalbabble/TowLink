@@ -734,7 +734,7 @@ JustGage = function(config) {
   setDy(obj.txtMax, obj.params.maxFontSize, obj.params.maxY);
 
   var defs = obj.canvas.canvas.childNodes[1];
-  var svg = "https://www.w3.org/2000/svg";
+  var svg = "http://www.w3.org/2000/svg";
 
   if (ie !== 'undefined' && ie < 9) {
     // VML mode - no SVG & SVG filter support
