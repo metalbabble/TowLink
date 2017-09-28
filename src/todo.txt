@@ -12,4 +12,3 @@ Nice to have
 
 Must have
   detect towing capability - nick
-  screen size - brian 
