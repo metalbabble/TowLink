@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  background-image:url("/images/bg.png");
+}
+
 #close {
   position: absolute;
   top: 90px;
@@ -28,7 +32,7 @@
     top: 104px;
   }
 
-  /*CUSTOM*/
+  /*home screen*/
 
     .gauge {
       width: 140px;
