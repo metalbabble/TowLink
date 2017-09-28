@@ -27,26 +27,26 @@ body {
   background-color:black;
 }
 
+/*
+.gauge {
+  width: 140px;
+  height: 60px;
+}
+
+.gaugeBox {
+  float: left;
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+*/
+
+
+/* For 10 inch display */
+
 @media (min-width: 801px) {
   #close {
     top: 104px;
   }
-
-  /*home screen*/
-
-    .gauge {
-      width: 140px;
-      height: 60px;
-    }
-
-    .gaugeBox {
-      float: left;
-      text-align: left;
-      width: 50%;
-      height: 100%;
-      box-sizing: border-box;
-    }
-    .indicatorLight {
-        background-color: red;
-    }
 }
