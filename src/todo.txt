@@ -9,6 +9,8 @@ Nice to have
   when switch out of reverse, go where you were last - nick
   look into warnings
   logo - brian
+  better trailer backup estimate
 
 Must have
   detect towing capability - nick
+  trailer brake gain - brian
