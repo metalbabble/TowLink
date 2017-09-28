@@ -6,11 +6,13 @@ Questions for GM
 
 Nice to have
   jquery
+  replace table layout with bootstrap or better CSS
   when switch out of reverse, go where you were last - nick
   look into warnings
-  logo - brian
   better trailer backup estimate
+  replace (X) with /!\
 
 Must have
   detect towing capability - nick
   trailer brake gain - brian
+  trailer light check - brian
