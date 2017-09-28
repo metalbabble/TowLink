@@ -16,6 +16,7 @@
   <script src="GMLIB/info.js"></script>
   <script src="GMLIB/voice.js"></script> 
   <script src="js/justgage.js"></script>
+  <script src="js/progressbar.min.js"></script>
   <script src="js/raphael-2.1.4.min.js"></script>
   <!-- Uncomment libraries as you need them: -->
   <!-- <script src="GMLIB/comm.js"></script> -->
@@ -64,7 +65,13 @@
             <img id="alert-hitch" src="images/ok-hitch.png" align="absmiddle"/>
             <b>Hitch Connected</b>
         </div>
-      </td></tr></table>
+      </td></tr>
+    <tr><td colspan="3">
+        <div class="brakeGainContainer">
+            <div class="brakeGainValue" id="brakegain" style="width: 0%; display:none">
+              Brake Gain - <span id="brakeGainValue">0</span>%</div>
+          </div>  
+    </td></tr></table>
 
       </div>
     </div>

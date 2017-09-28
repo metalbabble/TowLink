@@ -2,7 +2,7 @@
 
 // Watch Signals
 var signals = ['engine_oil_temp', 'brakes_overheated', 'trailer_brakelght_fail', 'transmission_oil_temp',
-  'trailer_hitch', 'engine_coolant_temp', 'gear_automatic', 'Display_units']
+  'trailer_hitch', 'engine_coolant_temp', 'gear_automatic', 'Display_units', 'trailer_brakes_gain']
 
 // Watch
 gm.info.watchVehicleData(function (data) {
@@ -50,14 +50,17 @@ gm.info.watchVehicleData(function (data) {
   trailerBrakeLightFail(data.trailer_brakelght_fail)
   trailerHitchConnected(data.trailer_hitch)
 
-// question: is there a tow haul mode?
+  //trailer brake
+  if (data.trailer_brakes_gain) {setBrakeGain(data.trailer_brakes_gain)}
+
+
 }, signals)
 
 // stoplite gagues
-
 function brakesOverheated (val) {
   console.log(val)
-  toggleAlertLight(val, 'overheat')
+  toggleAlertLight(val, 'overheat');
+
 }
 function trailerBrakeLightFail (val) {
   console.log(val)
@@ -117,18 +120,18 @@ function cToF (celsius) {
 // console.log(celsius * 9 / 5 + 32)
 }
 
+//used for text to speach
 var tssHandle
 
 function oilTempWarning (temp) {
   console.log('engine oil temp value ' + temp)
   if (temp > 220) {
-
     // voice
     tssHandle = gm.voice.startTTS(success, 'Warning. Engine Oil Temperature is to high. When safe pull over.')
   }
 }
 
-function transTempWarning () {
+function transTempWarning (temp) {
   console.log('transTempValue ' + temp)
   if (temp > 230) {
     // voice
@@ -139,4 +142,12 @@ function transTempWarning () {
 function success () {
   // stop from speaking
   gm.voice.stopTTS(tssHandle);
+}
+
+//Trailer Brake
+function setBrakeGain(units){
+  console.log(units);
+  document.getElementById('brakegain').style.display = "block";
+  document.getElementById('brakegain').style.width = units+'%';
+  document.getElementById('brakeGainValue').innerHTML = units;
 }
