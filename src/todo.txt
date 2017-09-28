@@ -13,10 +13,6 @@ Nice to have
   replace (X) with /!\
 
 Must have
-<<<<<<< HEAD
-  detect towing capability - nick
-=======
   detect towing capability - nick
   trailer brake gain - brian
   trailer light check - brian
->>>>>>> master
