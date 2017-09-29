@@ -11,8 +11,9 @@ Nice to have
   look into warnings
   better trailer backup estimate
   replace (X) with /!\
+  detect towing capability
 
 Must have
-  detect towing capability - nick
-  trailer brake gain fix size on 10 inch screen
-  BUG FIX toggle warning lights on home tab
+  BUG FIX toggle warning lights on home tab - nick
+  BUG FIX brake gain % cutoff on low %
+

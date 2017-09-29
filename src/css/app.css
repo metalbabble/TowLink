@@ -56,6 +56,11 @@ body {
   #close {
     top: 104px;
   }
+.gauge{
+ height: 400px;
+ width: 400px;
+}
+
 
   .enbiggen {
     font-size: 150%;
@@ -79,4 +84,10 @@ body {
   height:50%;
   width:50%;
   }
+
+  .gauge{
+    height: 150px;
+    width: 200px;
+   }
+   
 }

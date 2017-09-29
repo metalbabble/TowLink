@@ -78,7 +78,7 @@ var transOilTemp = new JustGage({
   min: 0,
   max: 250,
   pointer: true,
-  title: 'Transmission Oil Temperature',
+  title: 'Transmission Oil Temp',
   label: 'degrees',
 
   customSectors: [{
@@ -99,7 +99,7 @@ var engineOilTemp = new JustGage({
   min: 0,
   max: 250,
   pointer: true,
-  title: 'Engine Oil Temperature',
+  title: 'Engine Oil Temp',
   label: 'degrees',
 
   customSectors: [{
