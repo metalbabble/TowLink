@@ -37,14 +37,15 @@ body {
 .brakeGainContainer {
     width: 100%; /* Full width */
     background-color: #ddd; /* Grey background */
+    max-height:24px;
 }
 
 .brakeGainValue {
-    text-align: right; /* Right-align text */
-    padding-right: 10%; /* Add some right padding */
+    text-align: left;
+    padding-right: 10%;
     padding-left: 10%;
-    padding-bottom: 10%;
-    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    /*padding-bottom: 10%;*/
+    line-height: 24px; /* Set the line-height to center the text inside the bar, and to expand the height of the container */
     color: white; /* White text color */ 
     background-color: #4CAF50;
 }
@@ -69,8 +70,6 @@ body {
     transform: scale(2);
     margin-top:50px;
   }
-
-
 
 }
 

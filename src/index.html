@@ -27,7 +27,6 @@
   <!-- <script src="GMLIB/ui.js"></script> -->
   <!-- <script src="GMLIB/util.js"></script> -->
    
-
 </head>
 
 <body>
@@ -69,9 +68,9 @@
                 </div>
               </td>
             </tr>
-    <tr><td colspan="3">
-        <div class="brakeGainContainer">
-            <div class="brakeGainValue" id="brakegain" style="width: 0%; display:none">
+    <tr><td colspan="3" style="padding:4px;">
+        <div class="brakeGainContainer" style="max-height:24px;">
+            <div class="brakeGainValue" id="brakegain" style="width: 0%; display:none; max-height:24px;">
               Brake Gain - <span id="brakeGainValue">0</span>%</div>
           </div>  
     </td></tr></table>
@@ -91,7 +90,7 @@
         <h1>Trailering Checklist</h1>
         <table style="margin:auto">
           <tr>
-            <td>
+            <td style="vertical-align:top">
               <div>
                 <p style="text-align:left; padding-left:100px;">
                   <span id="checkList" class="enbiggen">
@@ -102,18 +101,19 @@
                   <label onclick="chkCheck();"><input type="checkbox" id="chkJacks"> Trailer free of leveling jacks and chucks</label><br/>
                 </span>
                 </p>
+                <p id="lblReadyToGo" style="display:none">
+                  <img src="images/ok.png" align="absmiddle" />
+                  <b>Ready to go!</b>
+                </p>
             </td>
             <td width="100px">
             </td>
             <td>
-              <img id="trailerLightChecker" src="images/trailer.png" />
+              <img id="trailerLightChecker" src="images/trailer.png"/>
+              <!-- TODO: overlay the PNG images of the error lights to support "multiple" bad bulbs -->
             </td>
           </tr>
         </table>
-        <p id="lblReadyToGo" style="display:none">
-          <img src="images/ok.png" align="absmiddle" />
-          <b>Ready to go!</b>
-        </p>
         </div>
       </div>
 
