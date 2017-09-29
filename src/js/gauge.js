@@ -1,19 +1,25 @@
 // gauge.js
 
 // Watch Signals
-var signals = ['engine_oil_temp', 'brakes_overheated', 'trailer_brakelght_fail', 'transmission_oil_temp',
-  'trailer_hitch', 'engine_coolant_temp', 'gear_automatic', 'Display_units', 'trailer_brakes_gain']
+var signals = [
+  'engine_oil_temp', 
+  'brakes_overheated',
+  'trailer_hitch',  
+  'trailer_brakelght_fail', 
+  'transmission_oil_temp',
+  'Display_units', 
+  'trailer_brakes_gain'
+]
 
-// Watch
+//--------------------------- Watch Signals ----------------------------
 gm.info.watchVehicleData(function (data) {
   console.log(data)
-  // signals
 
-  // get display units
+// get display units
   if (data.Display_units) { document.getElementById('units').value = data.Display_units; }
   displayUnit = document.getElementById('units').value
 
-  // oil temp
+// oil temp
   if (data.engine_oil_temp) {
     console.log('displayunis ' + displayUnit)
     if (document.getElementById('units').value == '$0')
@@ -29,7 +35,7 @@ gm.info.watchVehicleData(function (data) {
       console.log('f')
     }
   }
-  // trans temp
+// trans temp
   if (data.transmission_oil_temp) {
     console.log('displayunis ' + displayUnit)
     if (document.getElementById('units').value == '$0')
@@ -46,32 +52,32 @@ gm.info.watchVehicleData(function (data) {
     }
   }
 
-  brakesOverheated(data.brakes_overheated)
-  trailerBrakeLightFail(data.trailer_brakelght_fail)
-  trailerHitchConnected(data.trailer_hitch)
+//Boolean Checks
+if(data.brakes_overheated != null) {brakesOverheated(data.brakes_overheated);}
+if(data.trailer_brakelght_fail != null) {trailerBrakeLightFail(data.trailer_brakelght_fail);} 
+if(data.trailer_hitch != null) {trailerHitchConnected(data.trailer_hitch);} 
 
-  //trailer brake
-  if (data.trailer_brakes_gain) {setBrakeGain(data.trailer_brakes_gain)}
+//trailer brake
+if (data.trailer_brakes_gain) {setBrakeGain(data.trailer_brakes_gain)}
 
 
 }, signals)
 
 // stoplite gagues
 function brakesOverheated (val) {
-  console.log(val)
+  console.log('brakes overheated ' + val)
   toggleAlertLight(val, 'overheat');
+}
+function trailerBrakeLightFail (val1) {
+  console.log('Brake Light fail' + val1)
+  toggleAlertLight(val1, 'trailerlight')
+}
+function trailerHitchConnected (val2) {
+  console.log('Hitch Connected' + val2)
+  toggleAlertLight(!val2, 'hitch')
+}
 
-}
-function trailerBrakeLightFail (val) {
-  console.log(val)
-  toggleAlertLight(val, 'trailerlight')
-}
-function trailerHitchConnected (val) {
-  console.log(val)
-  toggleAlertLight(!val, 'hitch')
-}
-
-// Arrow Gauges
+//---------------------- Arrow Gauges -------------------------
 var transOilTemp = new JustGage({
   id: 'transOilTemp',
   value: 0,
@@ -114,14 +120,14 @@ var engineOilTemp = new JustGage({
   counter: true
 })
 
-// helper funcitons
+//--------------------- helper funcitons ----------------------
 function cToF (celsius) {
   return (celsius * 9 / 5 + 32)
 // console.log(celsius * 9 / 5 + 32)
 }
 
-//used for text to speach
-var tssHandle
+//------------------ used for text to speach ------------------
+var tssHandle //textToSpeachSessionId
 
 function oilTempWarning (temp) {
   console.log('engine oil temp value ' + temp)
@@ -144,9 +150,10 @@ function success () {
   gm.voice.stopTTS(tssHandle);
 }
 
-//Trailer Brake
+//------------------- Trailer Brake --------------------------
 function setBrakeGain(units){
   console.log(units);
+  document.getElementById('brakeGainTitle').style.display = "block";
   document.getElementById('brakegain').style.display = "block";
   document.getElementById('brakegain').style.width = units+'%';
   document.getElementById('brakeGainValue').innerHTML = units;
