@@ -22,23 +22,26 @@ function setTrailerLightsStatusImage(filename)
     document.getElementById("trailerLightChecker").src=filename;
 }
 
-
 gm.info.watchVehicleData(lightChecker, ['trailer_leftturn_fail']);
 gm.info.watchVehicleData(lightChecker, ['trailer_rightturn_fail']);
+gm.info.watchVehicleData(lightChecker, ['trailer_rearright_fail']);
+gm.info.watchVehicleData(lightChecker, ['trailer_rearleft_fail']);
 
 //handle bad light singnals 
 function lightChecker(data)
 {
-  console.log(data);  
+  console.log("light fail signal: " + data);
+  
+  //start with the default image
   document.getElementById("trailerLightChecker").src="/images/trailer.png";
 
-  if(data.trailer_leftturn_fail==1)
+  //overlay fail images
+  if(data.trailer_leftturn_fail || data.trailer_rearleft_fail)
   {
     document.getElementById("trailerLightChecker").src="/images/trailer_bad_l_brake.png";
   }
-  if(data.trailer_rightturn_fail==1)
+  if(data.trailer_rightturn_fail || data.trailer_rearright_fail)
   {
-      console.log("right light fail");
     document.getElementById("trailerLightChecker").src="/images/trailer_bad_r_brake.png";
   }
 }

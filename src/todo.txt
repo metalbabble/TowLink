@@ -14,5 +14,5 @@ Nice to have
 
 Must have
   detect towing capability - nick
-  trailer brake gain - brian
-  trailer light check - brian
+  trailer brake gain fix size on 10 inch screen
+  BUG FIX toggle warning lights on home tab
