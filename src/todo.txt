@@ -1,8 +1,8 @@
 TODO
 
 Questions for GM
-  tow haul mode
-  is there a way to bypass backup camera?
+  tow haul mode - answer NO
+  is there a way to bypass backup camera - asnwer NO
 
 Nice to have
   jquery
