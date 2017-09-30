@@ -50,3 +50,7 @@ Nice to have
   detect towing capability
 
 Must have
+
+  72 pixel hit zones
+  only add watch once
+  gm “before shut” clear out watches
