@@ -4,7 +4,8 @@
 }
 
 h1{
-  margin-top: 10px;;
+  margin-top: 10px;
+  margin-bottom: 3px;
 }
 
 h2{
@@ -36,6 +37,11 @@ body {
   text-align:center;
 }
 
+.checkbox {
+width: 25px;
+height: 25px;
+
+}
 
 
 /* Make sure that padding behaves as expected */
@@ -81,7 +87,14 @@ body {
     transform: scale(2);
     margin-top:50px;
   }
+  .checkbox {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 40px;
 
+    
+    }
+    
 }
 
 /* Only for smaller 8in screen */
