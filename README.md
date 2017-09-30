@@ -1,4 +1,4 @@
-#About
+# About
 
 This is a small, sample application which uses GM NGI vehicle data to provide usefull information when towing.
 
@@ -10,21 +10,19 @@ This is a small, sample application which uses GM NGI vehicle data to provide us
 
 THIS APP IS FOR DEMO USE ONLY AND IS NOT INTENDED TO BE USED IN AN ACTUAL VEHICLE.
 
-#Getting Started
+# Getting Started
 
 To start, install GM NGI from: https://developer.gm.com/ngi and execute:
 
 ngi serve
 
-#Testing
+# Testing
 
 To test, use the signal panel toolbar and adjust things like: wheel_angle, brakes_overheated, trailer_hitch, trailer_breaklight_fail, gear_state, wheel_angle
 
-#Contributing
-
+# Signal
 Be sure to add any new signal watches to app.js, all response to signals is routed through here
 
-#Signal
 wheel_angle
 gear_state
 engine_oil_temp
@@ -39,18 +37,16 @@ trailer_rightturn_fail
 trailer_rearright_fail
 trailer_rearleft_fail
 
-#TODO
+# TODO
 
 Questions for GM
-  tow haul mode - answer NO
-  is there a way to bypass backup camera - answer NO
+  * tow haul mode - answer NO
+  * is there a way to bypass backup camera - answer NO
 
 Nice to have
-  replace table layout with bootstrap or better CSS
-  when switch out of reverse, go where you were last - nick
-  look into warnings
-  better trailer backup estimate
-  replace (X) with /!\
-  detect towing capability
+  * replace table layout with better div/css (no bootstrap - not supported)
+  * when switch out of reverse, go where you were last - nick
+  * look into build warnings
+  * detect towing capability
 
 Must have

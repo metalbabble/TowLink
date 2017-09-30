@@ -19,12 +19,12 @@ function steeringUpdate(data)
     //wheel clockwise
     steer.html("<img src='images/left.png'>");
   }
-  if(data.wheel_angle > 1000)
+  if(data.wheel_angle > 200)
   {
     //wheel clockwise
     steer.html("<img src='images/hardleft.png'>");
   }
-  if(data.wheel_angle < -1000)
+  if(data.wheel_angle < -200)
   {
     //wheel clockwise
     steer.html("<img src='images/hardright.png'>");
