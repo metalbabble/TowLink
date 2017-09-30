@@ -2,13 +2,14 @@
 function chkCheck()
 {
 if(
-    document.getElementById("chkCoupler").checked &
-    document.getElementById("chkTirePressure").checked &
-    document.getElementById("chkElectrical").checked &
-    document.getElementById("chkChains").checked &
-    document.getElementById("chkJacks").checked)
+  $('#chkCoupler').is(':checked') &
+  $('#chkTirePressure').is(':checked') &
+  $('#chkElectrical').is(':checked') &
+  $('#chkChains').is(':checked') &
+  $('#chkJacks').is(':checked'))
     {
-        document.getElementById("lblReadyToGo").style.display = "block";
+        $("#lblReadyToGo").fadeIn();
+        console.log("display ready msg");
     }
 
 }
@@ -31,17 +32,18 @@ gm.info.watchVehicleData(lightChecker, ['trailer_rearleft_fail']);
 function lightChecker(data)
 {
   console.log("light fail signal: " + data);
+  var img = $("#trailerLightChecker");
   
   //start with the default image
-  document.getElementById("trailerLightChecker").src="/images/trailer.png";
+  img.src="/images/trailer.png";
 
   //overlay fail images
   if(data.trailer_leftturn_fail || data.trailer_rearleft_fail)
   {
-    document.getElementById("trailerLightChecker").src="/images/trailer_bad_l_brake.png";
+    img.attr("src","/images/trailer_bad_l_brake.png");
   }
   if(data.trailer_rightturn_fail || data.trailer_rearright_fail)
   {
-    document.getElementById("trailerLightChecker").src="/images/trailer_bad_r_brake.png";
+    img.attr("src","/images/trailer_bad_r_brake.png");
   }
 }
