@@ -30,6 +30,10 @@ trailer_brakelght_fail
 transmission_oil_temp
 Display_units
 trailer_brakes_gain
+trailer_leftturn_fail
+trailer_rightturn_fail
+trailer_rearright_fail
+trailer_rearleft_fail
 
 #TODO
 
