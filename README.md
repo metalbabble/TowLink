@@ -20,6 +20,10 @@ ngi serve
 
 To test, use the signal panel toolbar and adjust things like: wheel_angle, brakes_overheated, trailer_hitch, trailer_breaklight_fail, gear_state, wheel_angle
 
+#Contributing
+
+Be sure to add any new signal watches to app.js, all response to signals is routed through here
+
 #Signal
 wheel_angle
 gear_state

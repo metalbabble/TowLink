@@ -1,12 +1,7 @@
-// backup.js
+// backup.js - handles the back up tab actions
 
 //initial display
 gm.info.getVehicleData(steeringUpdate, ['wheel_angle']);
-
-//set watch
-gm.info.watchVehicleData(steeringUpdate, ['wheel_angle']);
-
-gm.info.watchVehicleData(gearStateUpdate, ['gear_state']);
 
 //handle steering angle change
 function steeringUpdate(data)

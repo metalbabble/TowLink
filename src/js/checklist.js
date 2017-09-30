@@ -23,11 +23,6 @@ function setTrailerLightsStatusImage(filename)
     document.getElementById("trailerLightChecker").src=filename;
 }
 
-gm.info.watchVehicleData(lightChecker, ['trailer_leftturn_fail']);
-gm.info.watchVehicleData(lightChecker, ['trailer_rightturn_fail']);
-gm.info.watchVehicleData(lightChecker, ['trailer_rearright_fail']);
-gm.info.watchVehicleData(lightChecker, ['trailer_rearleft_fail']);
-
 //handle bad light singnals 
 function lightChecker(data)
 {
