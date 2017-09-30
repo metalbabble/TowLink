@@ -20,6 +20,17 @@ ngi serve
 
 To test, use the signal panel toolbar and adjust things like: wheel_angle, brakes_overheated, trailer_hitch, trailer_breaklight_fail, gear_state, wheel_angle
 
+#Signal
+wheel_angle
+gear_state
+engine_oil_temp
+brakes_overheated
+trailer_hitch
+trailer_brakelght_fail
+transmission_oil_temp
+Display_units
+trailer_brakes_gain
+
 #TODO
 
 Questions for GM
