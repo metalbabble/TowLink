@@ -1,18 +1,7 @@
-// gauge.js
-
-// Watch Signals
-var signals = [
-  'engine_oil_temp', 
-  'brakes_overheated',
-  'trailer_hitch',  
-  'trailer_brakelght_fail', 
-  'transmission_oil_temp',
-  'Display_units', 
-  'trailer_brakes_gain'
-]
+// gauge.js - handles the home tab actions
 
 //--------------------------- Watch Signals ----------------------------
-gm.info.watchVehicleData(function (data) {
+function homeDashUpdate(data) {
   console.log(data)
 
 // get display units
@@ -61,7 +50,7 @@ if(data.trailer_hitch != null) {trailerHitchConnected(data.trailer_hitch);}
 if (data.trailer_brakes_gain) {setBrakeGain(data.trailer_brakes_gain)}
 
 
-}, signals)
+}
 
 // stoplite gagues
 function brakesOverheated (val) {
@@ -139,7 +128,7 @@ function oilTempWarning (temp) {
 
 function transTempWarning (temp) {
   console.log('transTempValue ' + temp)
-  if (temp > 230) {
+  if (temp > 230){
     // voice
     tssHandle = gm.voice.startTTS(success, 'Warning. Transmission Fluid Temperature is to high. When safe pull over.')
   }
