@@ -1,4 +1,6 @@
-// backup.js
+/*************************************
+ * Handles the back-up tab interactions
+ *************************************/
 
 //initial display
 gm.info.getVehicleData(steeringUpdate, ['wheel_angle']);

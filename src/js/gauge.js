@@ -1,4 +1,6 @@
-// gauge.js
+/*************************************
+ * Handles the gauge tab interactions
+ *************************************/
 
 // Watch Signals
 var signals = [
@@ -153,8 +155,8 @@ function success () {
 //------------------- Trailer Brake --------------------------
 function setBrakeGain(units){
   console.log(units);
-  document.getElementById('brakeGainTitle').style.display = "block";
-  document.getElementById('brakegain').style.display = "block";
-  document.getElementById('brakegain').style.width = units+'%';
-  document.getElementById('brakeGainValue').innerHTML = units;
+  $("#brakeGainTitle").fadeIn();
+  $("#brakegain").fadeIn();
+  $("#brakegain").width(units+'%');
+  $("#brakeGainValue").html(units);
 }
