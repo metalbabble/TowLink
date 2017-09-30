@@ -128,7 +128,7 @@ function oilTempWarning (temp) {
 
 function transTempWarning (temp) {
   console.log('transTempValue ' + temp)
-  if (temp > 230) {
+  if (temp > 100)/*230*/ {
     // voice
     tssHandle = gm.voice.startTTS(success, 'Warning. Transmission Fluid Temperature is to high. When safe pull over.')
   }
