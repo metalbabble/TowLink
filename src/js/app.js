@@ -1,21 +1,21 @@
 // --------SWITCH BETWEEN TABS-----------------
 
 function showHome () {
-  document.getElementById('tabHome').style.display = 'block'
-  document.getElementById('tabBackup').style.display = 'none'
-  document.getElementById('tabChecklist').style.display = 'none'
+  $("#tabHome").fadeIn();
+  $("#tabBackup").hide();
+  $("#tabChecklist").hide();
 }
 
 function showBackup () {
-  document.getElementById('tabHome').style.display = 'none'
-  document.getElementById('tabBackup').style.display = 'block'
-  document.getElementById('tabChecklist').style.display = 'none'
+  $("#tabHome").hide();
+  $("#tabBackup").fadeIn();
+  $("#tabChecklist").hide();
 }
 
 function showChecklist () {
-  document.getElementById('tabHome').style.display = 'none'
-  document.getElementById('tabBackup').style.display = 'none'
-  document.getElementById('tabChecklist').style.display = 'block'
+  $("#tabHome").hide();
+  $("#tabBackup").hide();
+  $("#tabChecklist").fadeIn();
 }
 
 // -----------ERROR LIGHTS--------------

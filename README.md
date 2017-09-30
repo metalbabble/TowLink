@@ -22,4 +22,16 @@ To test, use the signal panel toolbar and adjust things like: wheel_angle, brake
 
 #TODO
 
-see todo.txt for more info
+Questions for GM
+  tow haul mode - answer NO
+  is there a way to bypass backup camera - answer NO
+
+Nice to have
+  replace table layout with bootstrap or better CSS
+  when switch out of reverse, go where you were last - nick
+  look into warnings
+  better trailer backup estimate
+  replace (X) with /!\
+  detect towing capability
+
+Must have

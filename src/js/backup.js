@@ -11,23 +11,23 @@ gm.info.watchVehicleData(gearStateUpdate, ['gear_state']);
 //handle steering angle change
 function steeringUpdate(data)
 {
-  var steer = document.getElementById('steer');
-  console.log("Steering update. " + data);
+  var steer = $("#steer"); 
+  console.log("Steering update. " + data + "steer=" + steer);
 
   if(data.wheel_angle < 0)
   {
     //wheel counter-clockwise
-    steer.innerHTML = "<img src='images/right.png'>";
+    steer.html("<img src='images/right.png'>");
   }
   else if(data.wheel_angle > 0)
   {
     //wheel clockwise
-    steer.innerHTML = "<img src='images/left.png'>";
+    steer.html("<img src='images/left.png'>");
   }
   else
   {
     //wheel centered
-    steer.innerHTML = "<img src='images/center.png'>";
+    steer.html("<img src='images/center.png'>");
   }
 }
 
