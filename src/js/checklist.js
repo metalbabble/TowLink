@@ -1,3 +1,7 @@
+/*************************************
+ * Handles the checklist tab interactions
+ *************************************/
+
 // show "ready to go" message if all checkboxes are checked
 function chkCheck()
 {
